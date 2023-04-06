@@ -36,6 +36,9 @@ jobs:
       - run:
           name: "List Pip Packages"
           command: "pip list"
+      - run:
+          name: "Run Tests"
+          command: "coverage run -m pytest tests/"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
