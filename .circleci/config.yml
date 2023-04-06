@@ -35,7 +35,7 @@ jobs:
 
       - run:
           name: "List Pip Packages"
-          command: "pip show"
+          command: "pip list"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
