@@ -13,7 +13,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: cimg/python
+      - image: cimg/python:3.11
     # environment:
         # PYENV_ROOT: /home/circleci/.pyenv
         # PATH: /home/circleci/.pyenv/shims:/home/circleci/.pyenv/bin:$PATH
