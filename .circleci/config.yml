@@ -14,9 +14,9 @@ jobs:
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
       - image: cimg/python
-    environment:
-        PYENV_ROOT: /home/circleci/.pyenv
-        PATH: /home/circleci/.pyenv/shims:/home/circleci/.pyenv/bin:$PATH
+    # environment:
+        # PYENV_ROOT: /home/circleci/.pyenv
+        # PATH: /home/circleci/.pyenv/shims:/home/circleci/.pyenv/bin:$PATH
 
 
     # Add steps to the job
