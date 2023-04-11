@@ -39,9 +39,7 @@ jobs:
       - run:
           name: "Run Tests"
           command: "coverage run -m pytest tests/"
-      - run:
-          name: "Coveralls"
-          command: "coveralls"
+      - coveralls/upload
 
 
 # Orchestrate jobs using workflows
