@@ -39,6 +39,10 @@ jobs:
       - run:
           name: "Run Tests"
           command: "coverage run -m pytest tests/"
+      - run:
+          name: "Coveralls"
+          command: "coveralls"
+
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
