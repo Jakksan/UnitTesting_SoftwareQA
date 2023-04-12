@@ -38,7 +38,7 @@ jobs:
           command: "pip list"
       - run:
           name: "Run Tests"
-          command: "coverage run -m pytest tests/"
+          command: "coverage run -m pytest src/test_all.py"
       - coveralls/upload
 
 
