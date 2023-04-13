@@ -54,7 +54,7 @@ def test_classifyBMI(body_mass_index, oracle_classification):
 def test_input_validation(feet, inches, pounds):
     BMI_calculated = BMI.findBMI(pounds, feet, inches)
     BMI_class = BMI.classifyBMI(BMI_calculated)
-    BMI_class_no_val_given = BMI.classifyBMI()
+    BMI_class_no_val_given = BMI.classifyBMI(-1)
 
     assert BMI_calculated == "Invalid Input."
     assert BMI_class == "Invalid Input."

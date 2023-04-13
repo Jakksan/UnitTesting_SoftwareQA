@@ -41,6 +41,14 @@ def test_request_hello_world(client):
     response = client.get("/hello")
     assert b"Hello, World!" in response.data
 
+def test_request_index(client):
+    response = client.get("/")
+    assert b"BMI Calculator" in response.data
+
+def test_request_data(client):
+    response = client.get("/data")
+    assert b"The URL /data is accessed directly." in response.data
+
 def test_website_bmi_calc(client):
     send_data = {"lbs":"141", "ft":"5", "in":"8"}
     response = client.post('/data', data=send_data)

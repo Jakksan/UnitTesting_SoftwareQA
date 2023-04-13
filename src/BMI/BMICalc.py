@@ -24,9 +24,9 @@ def classifyBMI(BMI=-1):
         BMI_used = float(BMI_used)
     except:
         return("Invalid Input.")
+    
     if(BMI > 0):
         BMI_used = BMI # use provided BMI if it's valid
-        BMI = BMI # set internal BMI to new BMI
     else:
         return("Invalid Input.")
 
