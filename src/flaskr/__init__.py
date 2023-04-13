@@ -1,8 +1,14 @@
 # To run, use $flask --app flaskr run --debug
 import os
 
-from flask import Flask
+from flask import Flask, render_template, request
+import sys
+from pathlib import Path
 
+path_root = Path(__file__).parents[2]
+sys.path.append(str(path_root))
+
+import src.BMI.BMICalc as BMI
 
 def create_app(test_config=None):
     # create and configure the app
@@ -28,6 +34,32 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/hello')
     def hello():
-        return 'Hello, World!'
+        return 'Hello, World!<br><form></form>'
+
+
+    messages = [{'title': 'Message One', 'content': 'Message One Content'},
+                {'title': 'Message Two','content': 'Message Two Content'}]
+                
+    @app.route('/')
+    def index():
+        return(render_template('index.html', messages=messages))
+
+    # @app.route('/form')
+    # def form():
+    #     return(render_template('index.html'))
+    
+    @app.route('/data', methods = ['POST', 'GET'])
+    def data():
+        if request.method == 'GET':
+            return f"The URL /data is accessed directly. Try going to '/index' to submit index"
+        if request.method == 'POST':
+            form_data = request.form
+            weight = form_data["lbs"]
+            height_ft = form_data["ft"]
+            height_in = form_data["in"]
+            bmi = BMI.findBMI(weight, height_ft, height_in)
+            bmi_class = BMI.classifyBMI(bmi)
+            return render_template('index.html',bmi=bmi, bmi_class=bmi_class)
+    
 
     return app

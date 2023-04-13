@@ -2,13 +2,26 @@ import numpy
 import pytest
 
 def findBMI(weight, feet, inches):
+    weight = weight
+    feet = feet
+    inches = inches
+    try:
+        weight = float(weight)
+        feet = float(feet)
+        inches = float(inches)
+    except:
+        return("Invalid Input.")
+
     BMI = ( 703*weight ) / (( (feet*12) + inches)**2)
     return(BMI)
 
 def classifyBMI(BMI=-1):
     BMI_used = BMI # default to internally stored BMI
     classification = ""
-
+    try:
+        BMI_used = float(BMI_used)
+    except:
+        return("Invalid Input.")
     if(BMI > 0):
         BMI_used = BMI # use provided BMI if it's valid
         BMI = BMI # set internal BMI to new BMI
