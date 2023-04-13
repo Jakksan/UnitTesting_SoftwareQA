@@ -28,7 +28,7 @@ def classifyBMI(BMI=-1):
         BMI_used = BMI # use provided BMI if it's valid
         BMI = BMI # set internal BMI to new BMI
     else:
-        return(classification)
+        return("Invalid Input.")
 
     if (BMI_used < 18.5):
         classification = "Underweight"
@@ -38,8 +38,6 @@ def classifyBMI(BMI=-1):
         classification = "Overweight"
     elif (BMI_used >= 30):
         classification = "Obese"
-    else:
-        classification = "Should not be possible"
     
     return(classification)
     
