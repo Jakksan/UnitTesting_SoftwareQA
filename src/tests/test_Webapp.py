@@ -32,9 +32,9 @@ def client(app):
     return app.test_client()
 
 
-@pytest.fixture()
-def runner(app):
-    return app.test_cli_runner()
+# @pytest.fixture()
+# def runner(app):
+#     return app.test_cli_runner()
 
 
 def test_request_hello_world(client):

@@ -50,7 +50,14 @@ def test_classifyBMI(body_mass_index, oracle_classification):
         calculated_classification = BMI.classifyBMI(body_mass_index)
         assert calculated_classification == oracle_classification
 
-            
+@pytest.mark.parametrize("feet, inches, pounds", [("",44,99), (44,99,""), (44,"",99)])
+def test_input_validation(feet, inches, pounds):
+    BMI_calculated = BMI.findBMI(pounds, feet, inches)
+    BMI_class = BMI.classifyBMI(BMI_calculated)
+
+    assert BMI_calculated == "Invalid Input."
+    assert BMI_class == "Invalid Input."
+
 # def test_BMI_calc(feet, inches, pounds, finalBMI):
 #     test = BMI.BMI_calc(feet, inches, pounds)
 #     test.findBMI()
