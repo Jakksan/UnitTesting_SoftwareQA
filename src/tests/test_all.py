@@ -1,12 +1,18 @@
-import BMI
 import pytest
 import numpy
+import sys
+from pathlib import Path
+
+path_root = Path(__file__).parents[2]
+sys.path.append(str(path_root))
+
+import src.BMI.BMICalc as BMI
 
 @pytest.mark.parametrize("feet, inches, pounds, finalBMI", [(5, 10, 250, 35.9), (5, 3, 125, 22.1)])
 def test_findBMI(feet, inches, pounds, finalBMI, round_to_decimal=1):
     # This will be a checklist test, since it applies better than a boundary test for this situation.
     # Valid input is assumed, as it will be cleaned when it's read in
-    print("Test that our function for finding BMI works...")
+    # print("Test that our function for finding BMI works...")
     
     # Inputs: 5'10" & 130lbs give us the rounded output: 18.65
     passed = False
@@ -30,8 +36,8 @@ for point in BMI_boundary_points:
 test_points.sort()
 
 classification_oracle = ["Underweight", "Normal Weight", "Normal Weight", "Normal Weight", "Overweight", "Overweight", "Overweight", "Obese"] # expected vals of BMI_classifications
-print(test_points)
-print(classification_oracle)
+# print("Test Points:", test_points)
+# print("Oracle Classifications:", classification_oracle)
 val_oracle_tuples = []
 for i in range(0, len(classification_oracle)):
     val_oracle_tuple = (test_points[i], classification_oracle[i])
