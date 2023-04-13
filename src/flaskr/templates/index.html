@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/data" method = "POST">
+    <p>Weight (lbs) <input type = "text" name = "lbs" /></p>
+    <p>Height (feet) <input type = "text" name = "ft" /></p>
+    <p>Height (inches) <input type = "text" name = "in" /></p>
+    <p><input type = "submit" value = "submit" /></p>
+</form>
+
+<p>Calculated BMI: {{ bmi }}</p>
+<p>BMI Class: {{ bmi_class }}</p>
+
+</body>
+</html>
