@@ -1,6 +1,7 @@
 # STQA-Testing-Program
 
-[![Coverage Status](https://coveralls.io/repos/github/Jakksan/UnitTesting_SoftwareQA/badge.svg?branch=main(Coverage Status)!:https://coveralls.io/github/Jakksan/UnitTesting_SoftwareQA?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/Jakksan/UnitTesting_SoftwareQA/badge.svg?branch=main(Coverage Status)!:https://coveralls.io/github/Jakksan/UnitTesting_SoftwareQA?branch=main)]
+
 note that for some reason, 3 lines are being marked as not covered by the test cases, even though I know they are
 
 ## Project Description
