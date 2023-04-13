@@ -1,7 +1,7 @@
 import numpy
 import pytest
 
-def findBMI(weight, feet, inches):
+def findBMI(weight, feet, inches, round_to_decimal=-1):
     weight = weight
     feet = feet
     inches = inches
@@ -13,6 +13,8 @@ def findBMI(weight, feet, inches):
         return("Invalid Input.")
 
     BMI = ( 703*weight ) / (( (feet*12) + inches)**2)
+    if(round_to_decimal > -1):
+        BMI = round(BMI, round_to_decimal)
     return(BMI)
 
 def classifyBMI(BMI=-1):

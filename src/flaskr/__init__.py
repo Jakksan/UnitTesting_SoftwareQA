@@ -57,7 +57,7 @@ def create_app(test_config=None):
             weight = form_data["lbs"]
             height_ft = form_data["ft"]
             height_in = form_data["in"]
-            bmi = BMI.findBMI(weight, height_ft, height_in)
+            bmi = BMI.findBMI(weight, height_ft, height_in, 3)
             bmi_class = BMI.classifyBMI(bmi)
             return render_template('index.html',bmi=bmi, bmi_class=bmi_class)
     
