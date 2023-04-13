@@ -1,4 +1,4 @@
-# STQA-Testing-Program
+# UnitTesting_SoftwareQA
 
 [![Coverage Status](https://coveralls.io/repos/github/Jakksan/UnitTesting_SoftwareQA/badge.svg?branch=main)](https://coveralls.io/github/Jakksan/UnitTesting_SoftwareQA?branch=main)
 
