@@ -48,7 +48,7 @@ def create_app(test_config=None):
     @app.route('/data', methods = ['POST', 'GET'])
     def data():
         if request.method == 'GET':
-            return f"The URL /data is accessed directly. Try going to '/index' to submit index"
+            return f'{"The URL /data is accessed directly. Try going to /index to submit index"}'
         if request.method == 'POST':
             form_data = request.form
             weight = form_data["lbs"]

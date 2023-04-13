@@ -1,6 +1,3 @@
-import numpy
-import pytest
-
 def findBMI(weight, feet, inches, round_to_decimal=-1):
     weight = weight
     feet = feet

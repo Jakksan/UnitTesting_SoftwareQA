@@ -1,1 +1,1 @@
-from .BMICalc import *
+# from .BMICalc import BMICalc

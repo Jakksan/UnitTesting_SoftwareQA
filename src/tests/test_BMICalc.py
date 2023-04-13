@@ -15,7 +15,6 @@ def test_findBMI(feet, inches, pounds, finalBMI, round_to_decimal=1):
     # print("Test that our function for finding BMI works...")
     
     # Inputs: 5'10" & 130lbs give us the rounded output: 18.65
-    passed = False
     BMI_calculated = BMI.findBMI(pounds, feet, inches)
     
     assert BMI_calculated > 0 # BMI cannot be zero or negative
